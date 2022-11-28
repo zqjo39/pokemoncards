@@ -1,0 +1,109 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  padding: 48px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f8ff6d;
+  border: 10px solid #fffb48;
+  border-radius: 8px;
+  width: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-head {
+  min-height: 50px;
+  flex: 1;
+  flex-direction: row;
+  margin: 7px;
+}
+
+.card-name {
+  flex: 6;
+  margin: 7px;
+}
+
+.card-hp {
+  flex: 6;
+  margin: 7px;
+}
+
+.card-type {
+  flex: 6;
+  margin: 7px;
+}
+
+.card-body {
+
+}
+
+.card-picture {
+
+}
+
+.card-foot {
+
+}
+
+.card-moves {
+
+}
+
+.card-move-one {
+
+}
+
+.card-move-two {
+
+}
+
+.card-move-energy {
+
+}
+
+.card-move-name {
+
+}
+
+.card-move-dam {
+
+}
+
+.card-move-desc {
+
+}
+
+.card-bar {
+
+}
+
+.card-weak {
+
+}
+
+.card-strong {
+
+}
+
+.card-retreat {
+
+}
+
+.card-desc {
+
+}
+
+
+
