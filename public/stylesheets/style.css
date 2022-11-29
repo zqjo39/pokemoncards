@@ -15,8 +15,8 @@ a {
 }
 
 .card {
-  background: #f8ff6d;
-  border: 10px solid #fffb48;
+  background: #d7d7d7;
+  border: 10px solid #fffc75;
   border-radius: 8px;
   width: 350px;
   position: relative;
@@ -24,49 +24,67 @@ a {
 }
 
 .card-head {
-  min-height: 50px;
-  flex: 1;
-  flex-direction: row;
-  margin: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 5px 10px 5px 10px;
 }
 
 .card-name {
-  flex: 6;
-  margin: 7px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-hp {
-  flex: 6;
-  margin: 7px;
+  font-size: 20px;
+  position: absolute;
+  right: 30px;
 }
 
 .card-type {
-  flex: 6;
-  margin: 7px;
+  font-size: 20px;
 }
 
 .card-body {
-
+  border: 2px solid silver;
+  padding: 0px;
+  margin: 0px 20px 5px 15px;
+  width: 316px;
+  height: 205px;
 }
 
 .card-picture {
+  width: 316px;
+  height: 183px;
+}
 
+.card-pop {
+  position: relative;
+  border: 2px solid silver;
+  align-content: center;
 }
 
 .card-foot {
-
+  border: 3px solid black;
+  margin: 0px 15px 5px 15px;
+  flex-direction: row;
 }
 
 .card-moves {
-
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+  flex: 1;
 }
 
 .card-move-one {
+  border: 1px solid black;
 
 }
 
 .card-move-two {
-
+  border: 1px solid black;
 }
 
 .card-move-energy {
@@ -86,23 +104,30 @@ a {
 }
 
 .card-bar {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card-weak {
-
+  border: 1px solid black;
+  margin: 0px 15px 0px 15px;
 }
 
 .card-strong {
-
+  border: 1px solid black;
+  margin: 0px 15px 0px 15px;
 }
 
 .card-retreat {
-
+  border: 1px solid black;
+  margin: 0px 15px 0px 15px;
 }
 
 .card-desc {
-
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
 }
 
 
