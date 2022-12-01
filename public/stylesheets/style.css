@@ -122,7 +122,8 @@ a {
 }
 
 .card-move-desc {
-
+  display: flex;
+  font-size: 9px;
 }
 
 .card-bar {
