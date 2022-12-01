@@ -51,6 +51,11 @@ a {
   font-size: 20px;
 }
 
+.card-icon {
+  width: 17px;
+  height: 17px;
+}
+
 .card-body {
   border: 2px solid silver;
   padding: 0px;
