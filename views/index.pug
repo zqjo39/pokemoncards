@@ -1,49 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-
+  include mixins/pokemonCard
   div.container
     each card in cards
-      div(class= `card ${card.type}`)
-        div.card-head
-          div.card-name= card.name
-          div.card-hp= card.hp
-          div.card-type
-            img.card-icon(src = card.icon)
-        div.card-body
-          img.card-picture(src = card.picture)
-          div.card-pop= card.pop
-        div.card-foot
-          div.card-moves
-            div.card-move-one
-              div.card-move-energy
-                img.card-icon(src = card.enOneOn)
-                img.card-icon(src = card.enOneTw)
-                img.card-icon(src = card.enOneTh)
-              div.card-move-name= card.moveOne
-                div.card-move-desc= card.descOne
-              div.card-move-dam= card.damOne
-            div.card-move-two
-              div.card-move-energy
-                img.card-icon(src = card.enTwoOn)
-                img.card-icon(src = card.enTwoTw)
-                img.card-icon(src = card.enTwoTh)
-              div.card-move-name= card.moveTwo
-                div.card-move-desc= card.descTwo
-              div.card-move-dam= card.damTwo
-          div.card-bar
-            div.card-weak Weakness
-              div.card-energy
-                img.card-icon(src = card.weak)
-            div.card-strong Resistance
-              div.card-energy
-                img.card-icon(src = card.str)
-            div.card-retreat Retreat
-              div.card-energy
-                img.card-icon(src = card.icon)
-          div.card-desc= card.desc
+      +pokemonCard(card)
+
+
 
             // 39 other pokemon huh? well...
             //  1. decidueye (no. 724) *
