@@ -6,7 +6,7 @@ block content
 
   div.container
     each card in cards
-      div.card
+      div(class= `card ${card.type}`)
         div.card-head
           div.card-name= card.name
           div.card-hp= card.hp
@@ -46,7 +46,7 @@ block content
           div.card-desc= card.desc
 
             // 39 other pokemon huh? well...
-            //  1. decidueye (no. 724)
+            //  1. decidueye (no. 724) *
             //  2. braviary (no. 628)
             //  3. deino (no. 633)
             //  4. clawitzer (no. 692)

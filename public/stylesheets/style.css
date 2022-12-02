@@ -15,7 +15,7 @@ a {
 }
 
 .card {
-  background: #d7d7d7;
+  background: aliceblue;
   border: 10px solid #fffc75;
   border-radius: 8px;
   max-width: 350px;
@@ -59,21 +59,23 @@ a {
 .card-body {
   border: 2px solid silver;
   padding: 0px;
-  margin: 0px 20px 5px 15px;
+  margin: 0px 20px 0px 15px;
   width: 316px;
   height: 205px;
 }
 
 .card-picture {
   width: 316px;
-  height: 183px;
+  height: 186px;
 }
 
 .card-pop {
+  background: silver;
   display: flex;
   position: relative;
   border: 2px solid silver;
   padding: 3px;
+  margin: -3px 0px 0px 0px;
   justify-content: center;
   font-size: 9px;
   font-style: italic;
@@ -163,6 +165,78 @@ a {
   padding: 7px;
   font-size: 9px;
   font-style: italic;
+}
+
+.card.normal {
+  background: #e6ddd9;
+}
+
+.card.fighting {
+  background: #e23500;
+}
+
+.card.flying {
+  background: #def6ff;
+}
+
+.card.poison {
+  background: #ad089a;
+}
+
+.card.ground {
+  background: #8d552e;
+}
+
+.card.rock {
+  background: #d08e01;
+}
+
+.card.bug {
+  background: #64bb3a;
+}
+
+.card.ghost {
+  background: #5221a2;
+}
+
+.card.steel {
+  background: #949190;
+}
+
+.card.fire {
+  background: #fc4643;
+}
+
+.card.water {
+  background: #159dd9;
+}
+
+.card.grass {
+  background: #05a245;
+}
+
+.card.electric {
+  background: #fffe40;
+}
+
+.card.psychic {
+  background: #f352a8;
+}
+
+.card.ice {
+  background: #9dc8e8;
+}
+
+.card.dragon {
+  background: #3732b9;
+}
+
+.card.dark {
+  background: #2f3a54;
+}
+
+.card.fairy {
+  background: #fe9dfe;
 }
 
 
