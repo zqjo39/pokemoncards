@@ -13,20 +13,20 @@ mixin pokemonCard(card)
             div.card-moves
                 div.card-move-one
                     div.card-move-energy
-                        img.card-icon(src = card.enOneOn)
-                        img.card-icon(src = card.enOneTw)
-                        img.card-icon(src = card.enOneTh)
-                    div.card-move-name= card.moveOne
-                    div.card-move-desc= card.descOne
-                    div.card-move-dam= card.damOne
+                        img.card-icon(src = `${card.en_one_on}`)
+                        img.card-icon(src = `${card.en_one_tw}`)
+                        img.card-icon(src = `${card.en_one_th}`)
+                    div.card-move-name= card.move_one
+                        div.card-move-desc= card.desc_one
+                    div.card-move-dam= card.dam_one
                 div.card-move-two
                     div.card-move-energy
-                        img.card-icon(src = card.enTwoOn)
-                        img.card-icon(src = card.enTwoTw)
-                        img.card-icon(src = card.enTwoTh)
-                    div.card-move-name= card.moveTwo
-                    div.card-move-desc= card.descTwo
-                    div.card-move-dam= card.damTwo
+                        img.card-icon(src = `${card.en_two_on}`)
+                        img.card-icon(src = `${card.en_two_tw}`)
+                        img.card-icon(src = `${card.en_two_th}`)
+                    div.card-move-name= card.move_two
+                        div.card-move-desc= card.desc_two
+                    div.card-move-dam= card.dam_two
             div.card-bar
                 div.card-weak Weakness
                     div.card-energy

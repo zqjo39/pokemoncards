@@ -15,7 +15,26 @@ module.exports = (sequelize, DataTypes) => {
   }
   Card.init({
     name: DataTypes.STRING,
-
+    hp: DataTypes.STRING,
+    type: DataTypes.STRING,
+    icon: DataTypes.STRING,
+    picture: DataTypes.STRING,
+    pop: DataTypes.STRING,
+    move_one: DataTypes.STRING,
+    dam_one: DataTypes.STRING,
+    desc_one: DataTypes.STRING,
+    en_one_on: DataTypes.STRING,
+    en_one_tw: DataTypes.STRING,
+    en_one_th: DataTypes.STRING,
+    move_two: DataTypes.STRING,
+    dam_two: DataTypes.STRING,
+    desc_two: DataTypes.STRING,
+    en_two_on: DataTypes.STRING,
+    en_two_tw: DataTypes.STRING,
+    en_two_th: DataTypes.STRING,
+    weak: DataTypes.STRING,
+    str: DataTypes.STRING,
+    description: DataTypes.STRING,
 
   }, {
     sequelize,
