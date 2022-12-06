@@ -34,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     en_two_th: DataTypes.STRING,
     weak: DataTypes.STRING,
     str: DataTypes.STRING,
+    retreat: DataTypes.STRING,
     description: DataTypes.STRING,
 
   }, {
