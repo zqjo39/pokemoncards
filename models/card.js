@@ -36,7 +36,6 @@ module.exports = (sequelize, DataTypes) => {
     str: DataTypes.STRING,
     retreat: DataTypes.STRING,
     description: DataTypes.STRING,
-
   }, {
     sequelize,
     modelName: 'Card',

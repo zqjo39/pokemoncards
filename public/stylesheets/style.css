@@ -22,6 +22,7 @@ a {
   min-height: 450px;
   position: relative;
   overflow: hidden;
+  margin: 15px;
   box-shadow:
           rgba(0, 0, 0, 0) 0 0 0 0,
           rgba(0, 0, 0, 0) 0 0 0 0,
@@ -79,6 +80,7 @@ a {
   justify-content: center;
   font-size: 9px;
   font-style: italic;
+  color: black;
 }
 
 .card-foot {
@@ -112,11 +114,12 @@ a {
 }
 
 .card-move-energy {
-
+  display: flex;
+  flex-direction: row;
 }
 
 .card-move-name {
-
+  margin: 0px 25px 0px 25px;
 }
 
 .card-move-dam {
@@ -197,6 +200,7 @@ a {
 
 .card.ghost {
   background: #5221a2;
+  color: lightgrey;
 }
 
 .card.steel {
@@ -208,7 +212,7 @@ a {
 }
 
 .card.water {
-  background: #159dd9;
+  background: #35c5d9;
 }
 
 .card.grass {
@@ -229,10 +233,12 @@ a {
 
 .card.dragon {
   background: #3732b9;
+  color: lightgrey;
 }
 
 .card.dark {
   background: #2f3a54;
+  color: lightgrey;
 }
 
 .card.fairy {
