@@ -1,0 +1,65 @@
+extends layout
+
+block content
+    div.form-panel
+        div.header Edit Card
+            form(action = `/edit/${card.id}` method = 'post')
+                div.form-input
+                    label(for = 'name') Name:
+                    input(type = 'text' id = 'name' name = 'name' value = card.name)
+                div.form-input
+                    label(for = 'hp') HP:
+                    input(type = 'text' id = 'hp' name = 'hp' value = card.hp)
+                div.form-input
+                    label(for = 'type') Type:
+                    select(id = 'type' name = 'type' autocomplete = 'off')
+                        each type in types
+                            option(value=type selected = (type === card.type)) #{type}
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'pop') Pop:
+                    input(type = 'text' id = 'pop' name = 'pop' value = card.pop)
+                div.form-input
+                    label(for = 'moveOne') Picture URL:
+                    input(type = 'text' id = 'moveOne' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)
+                div.form-input
+                    label(for = 'picture') Picture URL:
+                    input(type = 'text' id = 'picture' name = 'picture' value = card.picture)

@@ -1,4 +1,5 @@
 const {Card} = require('../models')
+const types = ['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy'];
 
 module.exports.viewAll = async function(req, res, next) {
     const cards = await Card.findAll();
