@@ -4,7 +4,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(197, 74, 74);
+  margin: 3px;
 }
 
 .container {
@@ -19,7 +20,7 @@ a {
   border: 10px solid #fffc75;
   border-radius: 8px;
   max-width: 350px;
-  min-height: 450px;
+  min-height: 460px;
   position: relative;
   overflow: hidden;
   margin: 15px;
@@ -168,6 +169,11 @@ a {
   padding: 7px;
   font-size: 9px;
   font-style: italic;
+}
+
+.edit {
+  display: flex;
+  justify-content: right;
 }
 
 .card.normal {

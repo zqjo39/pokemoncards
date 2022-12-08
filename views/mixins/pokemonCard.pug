@@ -38,3 +38,5 @@ mixin pokemonCard(card)
                     div.card-energy
                         img.card-icon(src = card.retreat)
             div.card-desc= card.description
+            div.edit
+                a(href = `/edit/${card.id}`) Edit
