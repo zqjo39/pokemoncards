@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Card.init({
     name: DataTypes.STRING,
-    hp: DataTypes.STRING,
+    hp: DataTypes.INTEGER,
     type: DataTypes.STRING,
     icon: DataTypes.STRING,
     picture: DataTypes.STRING,

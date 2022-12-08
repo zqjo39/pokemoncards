@@ -4,6 +4,7 @@ mixin pokemonCard(card)
         div.card-head
             div.card-name= card.name
             div.card-hp= card.hp
+            div.card-hpHP HP
             div.card-type
                 img.card-icon(src = card.icon)
         div.card-body
@@ -13,30 +14,30 @@ mixin pokemonCard(card)
             div.card-moves
                 div.card-move-one
                     div.card-move-energy
-                        img.card-icon(src = `${card.en_one_on}`)
-                        img.card-icon(src = `${card.en_one_tw}`)
-                        img.card-icon(src = `${card.en_one_th}`)
+                        img.card-icon(src = `/images/${card.en_one_on}.png`)
+                        img.card-icon(src = `/images/${card.en_one_tw}.png`)
+                        img.card-icon(src = `/images/${card.en_one_th}.png`)
                     div.card-move-name= card.move_one
                         div.card-move-desc= card.desc_one
                     div.card-move-dam= card.dam_one
                 div.card-move-two
                     div.card-move-energy
-                        img.card-icon(src = `${card.en_two_on}`)
-                        img.card-icon(src = `${card.en_two_tw}`)
-                        img.card-icon(src = `${card.en_two_th}`)
+                        img.card-icon(src = `/images/${card.en_two_on}.png`)
+                        img.card-icon(src = `/images/${card.en_two_tw}.png`)
+                        img.card-icon(src = `/images/${card.en_two_th}.png`)
                     div.card-move-name= card.move_two
                         div.card-move-desc= card.desc_two
                     div.card-move-dam= card.dam_two
             div.card-bar
                 div.card-weak Weakness
                     div.card-energy
-                        img.card-icon(src = card.weak)
+                        img.card-icon(src = `/images/${card.weak}.png`)
                 div.card-strong Resistance
                     div.card-energy
-                        img.card-icon(src = card.str)
+                        img.card-icon(src = `/images/${card.str}.png`)
                 div.card-retreat Retreat
                     div.card-energy
-                        img.card-icon(src = card.retreat)
+                        img.card-icon(src = `/images/${card.retreat}.png`)
             div.card-desc= card.description
             div.edit
                 a(href = `/edit/${card.id}`) Edit

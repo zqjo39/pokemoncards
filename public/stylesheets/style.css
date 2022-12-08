@@ -46,7 +46,14 @@ a {
 .card-hp {
   font-size: 20px;
   position: absolute;
+  right: 60px;
+}
+
+.card-hpHP {
+  font-size: 20px;
+  position: absolute;
   right: 30px;
+  down: 100px;
 }
 
 .card-type {

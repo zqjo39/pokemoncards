@@ -30,17 +30,17 @@ mixin pokemonForm(card, actionURL, mode, title)
                     label(for = 'descOne') Move Description:
                     input(type = 'text' id = 'descOne' name = 'descOne' value = card.desc_one)
                 div.form-input
-                    label(for = 'enOneOn') Type:
+                    label(for = 'enOneOn') Energy Cost:
                     select(id = 'enOneOn' name = 'enOneOn' autocomplete = 'off')
                         each type in types
                             option(value=type selected = (type === card.en_one_on)) #{type}
                 div.form-input
-                    label(for = 'enOneTw') Type:
+                    label(for = 'enOneTw') Energy Cost:
                     select(id = 'enOneTw' name = 'enOneTw' autocomplete = 'off')
                         each type in types
                             option(value=type selected = (type === card.en_one_tw)) #{type}
                 div.form-input
-                    label(for = 'enOneTh') Type:
+                    label(for = 'enOneTh') Energy Cost:
                     select(id = 'enOneTh' name = 'enOneTh' autocomplete = 'off')
                         each type in types
                             option(value=type selected = (type === card.en_one_th)) #{type}
@@ -54,29 +54,35 @@ mixin pokemonForm(card, actionURL, mode, title)
                     label(for = 'descTwo') Move Description:
                     input(type = 'text' id = 'descTwo' name = 'descTwo' value = card.desc_two)
                 div.form-input
-                    label(for = 'enTwoOn') Type:
+                    label(for = 'enTwoOn') Energy Cost:
                     select(id = 'enTwoOn' name = 'enTwoOn' autocomplete = 'off')
                         each type in types
                             option(value=type selected = (type === card.en_two_on)) #{type}
                 div.form-input
-                    label(for = 'enTwoTw') Type:
+                    label(for = 'enTwoTw') Energy Cost:
                     select(id = 'enTwoTw' name = 'enTwoTw' autocomplete = 'off')
                         each type in types
                             option(value=type selected = (type === card.en_two_tw)) #{type}
                 div.form-input
-                    label(for = 'enTwoTh') Type:
+                    label(for = 'enTwoTh') Energy Cost:
                     select(id = 'enTwoTh' name = 'enTwoTh' autocomplete = 'off')
                         each type in types
                             option(value=type selected = (type === card.en_two_th)) #{type}
                 div.form-input
                     label(for = 'weak') Weakness:
-                    input(type = 'text' id = 'weak' name = 'weak' value = card.weak)
+                    select(id = 'weak' name = 'weak' autocomplete = 'off')
+                        each type in types
+                            option(value=type selected = (type === card.weak)) #{type}
                 div.form-input
-                    label(for = 'strong') Strength:
-                    input(type = 'text' id = 'strong' name = 'strong' value = card.str)
+                    label(for = 'str') Strength:
+                    select(id = 'str' name = 'str' autocomplete = 'off')
+                        each type in types
+                            option(value=type selected = (type === card.str)) #{type}
                 div.form-input
-                    label(for = 'retreat') Retreat:
-                    input(type = 'text' id = 'retreat' name = 'retreat' value = card.retreat)
+                    label(for = 'retreat') Retreat Cost:
+                    select(id = 'retreat' name = 'retreat' autocomplete = 'off')
+                        each type in types
+                            option(value=type selected = (type === card.retreat)) #{type}
                 div.form-input
                     label(for = 'desc') Description:
                     input(type = 'text' id = 'desc' name = 'desc' value = card.description)
