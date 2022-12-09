@@ -183,12 +183,40 @@ a {
   justify-content: right;
 }
 
+.button {
+  display: block;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 1px 2px 0px;
+  font-size: 14px;
+  line-height: 1.25rem;
+}
+
+.button.save {
+  background: #115E75;
+  color: white;
+  border: 1px solid #164E63;
+}
+
+.add-button-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-header {
+  background: aliceblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .card.Normal {
   background: #e6ddd9;
 }
 
 .card.Fighting {
-  background: #e23500;
+  background: #9d2b00;
 }
 
 .card.Flying {
@@ -221,7 +249,7 @@ a {
 }
 
 .card.Fire {
-  background: #fc4643;
+  background: #bc3b39;
 }
 
 .card.Water {

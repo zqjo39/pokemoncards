@@ -3,7 +3,12 @@ const types = ['N/A', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock'
 
 module.exports.viewAll = async function(req, res, next) {
     const cards = await Card.findAll();
-    res.render('index', {cards});
+    let searchType = 'All';
+    let searchTypes = ['All'];
+    for(let i = 0; i < types.length; i++) {
+        searchTypes.push(types[i]);
+    }
+    res.render('index', {cards, types:searchTypes, searchType});
 };
 
 module.exports.renderEditForm = async function(req, res, next) {
@@ -18,25 +23,25 @@ module.exports.updateCard = async function(req, res) {
         {
             name: req.body.name,
             hp: req.body.hp,
-            type: `/images/${req.body.type}.png`,
+            type: req.body.type,
             icon: req.body.icon,
             picture: req.body.picture,
             pop: req.body.pop,
             move_one: req.body.move_one,
             dam_one: req.body.dam_one,
             desc_one: req.body.desc_one,
-            en_one_on: `/images/${req.body.en_one_on}.png`,
-            en_one_tw: `/images/${req.body.en_one_tw}.png`,
-            en_one_th: `/images/${req.body.en_one_th}.png`,
+            en_one_on: req.body.en_one_on,
+            en_one_tw: req.body.en_one_tw,
+            en_one_th: req.body.en_one_th,
             move_two: req.body.move_two,
             dam_two: req.body.dam_two,
             desc_two: req.body.desc_two,
-            en_two_on: `/images/${req.body.en_two_on}.png`,
-            en_two_tw: `/images/${req.body.en_two_tw}.png`,
-            en_two_th: `/images/${req.body.en_two_th}.png`,
-            weak: `/images/${req.body.weak}.png`,
-            str: `/images/${req.body.str}.png`,
-            retreat: `/images/${req.body.retreat}.png`,
+            en_two_on:req.body.en_two_on,
+            en_two_tw: req.body.en_two_tw,
+            en_two_th: req.body.en_two_th,
+            weak: req.body.weak,
+            str: req.body.str,
+            retreat: req.body.retreat,
             description: req.body.description
         },
         {
@@ -92,26 +97,26 @@ module.exports.addCard = async function(req, res) {
         {
             name: req.body.name,
             hp: req.body.hp,
-            type: `/images/${req.body.type}.png`,
-            icon: req.body.icon,
+            type: req.body.type,
+            icon: req.body.type,
             picture: req.body.picture,
             pop: req.body.pop,
             move_one: req.body.move_one,
             dam_one: req.body.dam_one,
             desc_one: req.body.desc_one,
-            en_one_on: `/images/${req.body.en_one_on}.png`,
-            en_one_tw: `/images/${req.body.en_one_tw}.png`,
-            en_one_th: `/images/${req.body.en_one_th}.png`,
+            en_one_on: req.body.en_one_on,
+            en_one_tw: req.body.en_one_tw,
+            en_one_th: req.body.en_one_th,
             move_two: req.body.move_two,
             dam_two: req.body.dam_two,
             desc_two: req.body.desc_two,
-            en_two_on: `/images/${req.body.en_two_on}.png`,
-            en_two_tw: `/images/${req.body.en_two_tw}.png`,
-            en_two_th: `/images/${req.body.en_two_th}.png`,
-            weak: `/images/${req.body.weak}.png`,
-            str: `/images/${req.body.str}.png`,
-            retreat: `/images/${req.body.retreat}.png`,
-            description: req.body.description
+            en_two_on: req.body.en_two_on,
+            en_two_tw: req.body.en_two_tw,
+            en_two_th: req.body.en_two_th,
+            weak: req.body.weak,
+            str: req.body.str,
+            retreat: req.body.retreat,
+            description: req.body.description,
         });
     res.redirect('/');
 }
