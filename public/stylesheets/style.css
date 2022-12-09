@@ -183,78 +183,78 @@ a {
   justify-content: right;
 }
 
-.card.normal {
+.card.Normal {
   background: #e6ddd9;
 }
 
-.card.fighting {
+.card.Fighting {
   background: #e23500;
 }
 
-.card.flying {
+.card.Flying {
   background: #def6ff;
 }
 
-.card.poison {
+.card.Poison {
   background: #ad089a;
 }
 
-.card.ground {
+.card.Ground {
   background: #8d552e;
 }
 
-.card.rock {
+.card.Rock {
   background: #d08e01;
 }
 
-.card.bug {
+.card.Bug {
   background: #64bb3a;
 }
 
-.card.ghost {
+.card.Ghost {
   background: #5221a2;
   color: lightgrey;
 }
 
-.card.steel {
+.card.Steel {
   background: #949190;
 }
 
-.card.fire {
+.card.Fire {
   background: #fc4643;
 }
 
-.card.water {
+.card.Water {
   background: #35c5d9;
 }
 
-.card.grass {
+.card.Grass {
   background: #05a245;
 }
 
-.card.electric {
+.card.Electric {
   background: #fffe40;
 }
 
-.card.psychic {
+.card.Psychic {
   background: #f352a8;
 }
 
-.card.ice {
+.card.Ice {
   background: #9dc8e8;
 }
 
-.card.dragon {
+.card.Dragon {
   background: #3732b9;
   color: lightgrey;
 }
 
-.card.dark {
+.card.Dark {
   background: #2f3a54;
   color: lightgrey;
 }
 
-.card.fairy {
+.card.Fairy {
   background: #fe9dfe;
 }
 

@@ -6,7 +6,7 @@ mixin pokemonCard(card)
             div.card-hp= card.hp
             div.card-hpHP HP
             div.card-type
-                img.card-icon(src = card.icon)
+                img.card-icon(src = `/images/${card.icon}.png`)
         div.card-body
             img.card-picture(src = card.picture)
             div.card-pop= card.pop
