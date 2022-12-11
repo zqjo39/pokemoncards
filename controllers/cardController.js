@@ -2,13 +2,67 @@ const {Card} = require('../models')
 const types = ['N/A', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy'];
 
 module.exports.viewAll = async function(req, res, next) {
-    const cards = await Card.findAll();
-    let searchType = 'All';
     let searchTypes = ['All'];
+    let searchWeaks = ['All'];
+    let searchStrs = ['All'];
     for(let i = 0; i < types.length; i++) {
         searchTypes.push(types[i]);
     }
-    res.render('index', {cards, types:searchTypes, searchType});
+    for(let i = 0; i < types.length; i++) {
+        searchWeaks.push(types[i]);
+    }
+    for(let i = 0; i < types.length; i++) {
+        searchStrs.push(types[i]);
+    }
+    let cards;
+    let searchType = req.query.type || 'All';
+    let searchHp = req.query.hp;
+    let searchWeak = req.query.weak || 'All';
+    let searchStr = req.query.str || 'All';
+    let searchRandom = req.query.random || false;
+    if (searchType === 'All') {
+        cards = await Card.findAll();
+    } else {
+        cards = await Card.findAll({
+            where: {
+                type: searchType
+            }
+        });
+    }
+    if (searchHp === '') {
+        cards = await Card.findAll();
+    } else {
+        for (let i = 0; i < searchHp; i++) {
+            cards = await Card.findAll({
+                where: {
+                    hp: searchHp
+                }
+            });
+        }
+    }
+    if (searchWeak === 'All') {
+        cards = await Card.findAll();
+    } else {
+        cards = await Card.findAll({
+            where: {
+                weak: searchWeak
+            }
+        });
+    }
+    if (searchStr === 'All') {
+        cards = await Card.findAll();
+    } else {
+        cards = await Card.findAll({
+            where: {
+                str: searchStr
+            }
+        });
+    }
+    if (cards.length > 0 && searchRandom) {
+        let randomIndex = getRandomInt(cards.length);
+        cards = [cards[randomIndex]];
+    }
+    res.render('index', {cards, types:searchTypes, searchType, searchHp, types:searchWeaks, searchWeak, types:searchStrs, searchStr, searchRandom});
 };
 
 module.exports.renderEditForm = async function(req, res, next) {
@@ -67,7 +121,7 @@ module.exports.deleteCard = async function(req, res) {
 module.exports.renderAddForm = function(req, res) {
     const card = {
         name: "",
-        hp: 1,
+        hp: 0,
         type: types[0],
         icon: "",
         picture: "",
@@ -119,4 +173,8 @@ module.exports.addCard = async function(req, res) {
             description: req.body.description,
         });
     res.redirect('/');
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max)
 }
