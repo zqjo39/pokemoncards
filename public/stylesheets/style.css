@@ -4,8 +4,13 @@ body {
 }
 
 a {
-  color: rgb(197, 74, 74);
-  margin: 3px;
+  display: block;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 1px 2px 0px;
+  font-size: 14px;
+  line-height: 1.25rem;
 }
 
 .container {
@@ -178,9 +183,36 @@ a {
   font-style: italic;
 }
 
+.form-panel {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  margin: 16px 650px 16px 650px;
+  border: 1px solid grey;
+  background: aliceblue;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0) 0 0 0 0,
+          rgba(0, 0, 0, 0.1) 0 1px 10px 0,
+          rgba(0, 0, 0, 0.06) 0 1px 10px 0
+}
+
+.form-input {
+  padding: 3px;
+}
+
 .edit {
   display: flex;
   justify-content: right;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
 }
 
 .button {
@@ -199,13 +231,25 @@ a {
   border: 1px solid #164E63;
 }
 
+.button.cancel {
+  background: #828517;
+  color: white;
+  border: 1px solid #636300;
+}
+
+.button.delete {
+  background: #750f0a;
+  color: white;
+  border: 1px solid #630200;
+}
+
 .add-button-row {
   display: flex;
   justify-content: flex-start;
 }
 
 .main-header {
-  background: aliceblue;
+  background: white;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -216,7 +260,7 @@ a {
 }
 
 .card.Fighting {
-  background: #9d2b00;
+  background: #9d4810;
 }
 
 .card.Flying {

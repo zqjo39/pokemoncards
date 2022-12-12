@@ -8,7 +8,7 @@ mixin pokemonForm(card, actionURL, mode, title)
                     input(type = 'text' id = 'name' name = 'name' placeholder = 'Bulbasaur' value = card.name)
                 div.form-input
                     label(for = 'hp') HP:
-                    input(type = 'text' id = 'hp' name = 'hp' placeholder = '70' value = card.hp)
+                    input(type = 'number' id = 'hp' name = 'hp' placeholder = '70' value = card.hp)
                 div.form-input
                     label(for = 'type') Type:
                     select(id = 'type' name = 'type' autocomplete = 'off')
@@ -87,7 +87,8 @@ mixin pokemonForm(card, actionURL, mode, title)
                     label(for = 'description') Description:
                     input(type = 'text' id = 'description' name = 'description' placeholder = 'There is a plant seed on its back right from the day this Pokemon is born. The seed slowly grows larger.' value = card.description)
                 div.button-row
-                    a.button.cancel(href = '/') Cancel
-                    if (mode === 'edit')
-                        a.button.delete(href = `/delete/${card.id}`) Delete
-                    button.button.save(type = 'submit') Submit
+                    div.buttons
+                        a.button.cancel(href = '/') Cancel
+                        if (mode === 'edit')
+                            a.button.delete(href = `/delete/${card.id}`) Delete
+                        button.button.save(type = 'submit') Submit
