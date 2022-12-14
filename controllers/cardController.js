@@ -38,7 +38,7 @@ module.exports.updateCard = async function(req, res) {
             name: req.body.name,
             hp: req.body.hp,
             type: req.body.type,
-            icon: req.body.icon,
+            icon: req.body.type,
             picture: req.body.picture,
             pop: req.body.pop,
             move_one: req.body.move_one,
